@@ -1,6 +1,6 @@
 ## fecon236 :: Tools for financial economics
 
-***Curated wrapper over Python ecosystem.
+***Robust collection of Python utilities for financial economics.
 Source code for fecon235 Jupyter notebooks.***
 
 GitHub repository is at [fecon236], see [CHANGELOG][236log] for revision history.
@@ -22,7 +22,7 @@ are seamlessly integrated at a high-level with APIs of various data hosts for:
 
 - Essential commands which correctly handle annoying low-level pitfalls.
 
-- Retrieval of economic and financial data, both historical and the most current. 
+- Retrieval of economic and financial data, both historical and the most current.
 
 - Data munging, for example, resampling and alignment of time-series data
   from hosts using mutually incompatible formats.
@@ -33,10 +33,19 @@ are seamlessly integrated at a high-level with APIs of various data hosts for:
 - Abstraction and software optimization of mathematical operators,
   for example, linear algebra used in portfolio analysis.
 
-- Visualization of data using graphical packages. 
+- Visualization of data using graphical packages.
 
 - *Reproducible research which is collaborative and openly accessible
   at zero cost.*
+
+
+**Database:** the primary source used by ``fecon236`` is [FRED], the U.S. Federal Reserve
+Economic Data bank which is accessed directly online using our interface.
+Other specialized data can be directly retrieved using the ``fecon236`` [Quandl] API
+module, for example, futures prices. Data for stocks, mutual funds, and
+ETFs is retrieved from the best available sources using `pandas_datareader`.
+Data is designed to be accessible *free* of charge,
+and *interoperable* in different time frequencies.
 
 To practically test theoretical ideas interactively,
 [fecon236] can employed with any Python IDE interactive development
@@ -59,6 +68,10 @@ Please start your orientation with this [README notebook][readnb]
 which shows how most of this project is self-documenting.
 
 
+### Common Tasks
+
+
+
 ### Development status: stable
 
 For the developer, we recommend forking the [fecon236] repository, then
@@ -77,7 +90,7 @@ i.e. modules names and their aliases are significant.
 - After 2019-01-01, our official support for python27 will discontinue
   (like numpy and pandas), however, straddling code may still
   continue to work.
- 
+
 Version 11 of fecon236 will signal when our [Travis] builds under Python 2.7
 fail, and at that point we expect to require at least Python 3.6.
 
